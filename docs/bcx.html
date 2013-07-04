@@ -39,6 +39,11 @@
               </a>
             
               
+              <a class="source" href="access.html">
+                access.rb
+              </a>
+            
+              
               <a class="source" href="person.html">
                 person.rb
               </a>
@@ -68,6 +73,11 @@
                 version.rb
               </a>
             
+              
+              <a class="source" href="collection.html">
+                collection.rb
+              </a>
+            
           </div>
         </li>
       </ul>
@@ -92,6 +102,7 @@
             </div>
             
             <div class="content"><div class='highlight'><pre><span class="keyword">require</span> <span class="string">'rapidash'</span>
+<span class="keyword">require</span> <span class="string">'rapidash/collection'</span>
 <span class="keyword">require</span> <span class="string">'bcx/version'</span></pre></div></div>
             
         </li>
@@ -100,10 +111,10 @@
         <li id="section-2">
             <div class="annotation">
               
-              <div class="pilwrap for-h1">
+              <div class="pilwrap for-h2">
                 <a class="pilcrow" href="#section-2">&#182;</a>
               </div>
-              <h1>Bcx</h1>
+              <h2>Bcx</h2>
 <p>Fully-fledged Ruby API wrapper for Basecamp Next</p>
 <p> See the <a href="https://github.com/paulspringett/bcx#readme">README</a> for usage</p>
 
@@ -117,6 +128,7 @@
     autoload <span class="symbol">:Todolist</span>, <span class="string">'bcx/resources/todolist'</span>
     autoload <span class="symbol">:Project</span>, <span class="string">'bcx/resources/project'</span>
     autoload <span class="symbol">:Person</span>, <span class="string">'bcx/resources/person'</span>
+    autoload <span class="symbol">:Access</span>, <span class="string">'bcx/resources/access'</span>
   <span class="keyword">end</span>
 
   <span class="class"><span class="keyword">module</span> <span class="title">Client</span></span>

@@ -39,6 +39,11 @@
               </a>
             
               
+              <a class="source" href="access.html">
+                access.rb
+              </a>
+            
+              
               <a class="source" href="person.html">
                 person.rb
               </a>
@@ -68,6 +73,11 @@
                 version.rb
               </a>
             
+              
+              <a class="source" href="collection.html">
+                collection.rb
+              </a>
+            
           </div>
         </li>
       </ul>
@@ -85,47 +95,34 @@
         <li id="section-1">
             <div class="annotation">
               
-              <div class="pilwrap ">
+              <div class="pilwrap for-h2">
                 <a class="pilcrow" href="#section-1">&#182;</a>
               </div>
-              
-            </div>
-            
-            <div class="content"><div class='highlight'><pre><span class="class"><span class="keyword">module</span> <span class="title">Bcx</span></span>
-  <span class="class"><span class="keyword">module</span> <span class="title">Resources</span></span></pre></div></div>
-            
-        </li>
-        
-        
-        <li id="section-2">
-            <div class="annotation">
-              
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-2">&#182;</a>
-              </div>
-              <p>Bcx::Resources::Todo
-Provides access to todolist resoource both at the client level and per-project</p>
-<p>Get todos for a todolist
-GET /todolists/1.json</p>
-<p>  todolist = client.todolists!(1)
-  todolist.todos.remaining
-  todolist.todos.completed</p>
-<p>Get a specific todo
-GET /projects/1/todos/2.json</p>
-<p>  client.projects(1).todos!(2)</p>
-<p>Create a todo
-POST /projects/1/todolists/2/todos.json</p>
-<p>  client.projects(1).todolists(2).todos.create!(content: &#39;Update copy text&#39;)</p>
-<p>Update a todo
-PUT /projects/1/todos/2.json</p>
-<p>  client.projects(1).todos(2).update!(completed: true)</p>
-<p>Delete a todo
-DELETE /projects/1/todos/2.json</p>
-<p>  client.projects(1).todos(2).delete!</p>
+              <h2>Todo</h2>
+<p>Provides access to todolist resoource both at the client level and per-project</p>
+<h4>Get todos for a todolist</h4>
+<p><code>GET /todolists/1.json</code></p>
+<pre><code>todolist = client.todolists!(1)
+todolist.todos.remaining
+todolist.todos.completed</code></pre>
+<h4>Get a specific todo</h4>
+<p><code>GET /projects/1/todos/2.json</code></p>
+<pre><code>client.projects(1).todos!(2)</code></pre>
+<h4>Create a todo</h4>
+<p><code>POST /projects/1/todolists/2/todos.json</code></p>
+<pre><code>client.projects(1).todolists(2).todos.create!(content: &#39;Update copy text&#39;)</code></pre>
+<h4>Update a todo</h4>
+<p><code>PUT /projects/1/todos/2.json</code></p>
+<pre><code>client.projects(1).todos(2).update!(completed: true)</code></pre>
+<h4>Delete a todo</h4>
+<p><code>DELETE /projects/1/todos/2.json</code></p>
+<pre><code>client.projects(1).todos(2).delete!</code></pre>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>    <span class="class"><span class="keyword">class</span> <span class="title">Todo</span> <span class="inheritance">&lt; <span class="parent">Rapidash::Base</span></span></span>
+            <div class="content"><div class='highlight'><pre><span class="class"><span class="keyword">module</span> <span class="title">Bcx</span></span>
+  <span class="class"><span class="keyword">module</span> <span class="title">Resources</span></span>
+    <span class="class"><span class="keyword">class</span> <span class="title">Todo</span> <span class="inheritance">&lt; <span class="parent">Rapidash::Base</span></span></span>
     <span class="keyword">end</span>
   <span class="keyword">end</span>
 <span class="keyword">end</span></pre></div></div>
